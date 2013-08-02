@@ -1,5 +1,3 @@
-#include "StdAfx.h"
-#include "verylong.h"
 
 string operator* (const string num1, const string num2) {
 	verylong TEMP;
@@ -117,7 +115,7 @@ return sum;
 string verylong::power_over(string p, double n) {
 	string res = "1";
 	double i;
-/*	ostringstream oss; //преобразование из double в string
+/*	ostringstream oss; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ double пїЅ string
 	oss << n;
 	power=oss.str();*/
 	for (i=0; i < n; i++) 
