@@ -1,5 +1,3 @@
-#include "StdAfx.h"
-#include "verylong.h"
 
 string operator+(const string sum1, const string sum2) {
 	verylong TEMP;
@@ -38,7 +36,7 @@ string operator+(const string sum1, const string sum2) {
 		}
 	}
 
-//если оба положительные
+//пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if ((TEMP.minus1==false && TEMP.minus2==false) || (TEMP.minus1==true && TEMP.minus2==true)) {
 	if (TEMP.count1>TEMP.count2 || TEMP.count1==TEMP.count2) {
 	   dif=TEMP.count1-TEMP.count2;
@@ -78,7 +76,7 @@ if (TEMP.minus1==false && TEMP.minus2==false) {
    }
    return result;
 }
-//если minus1=true и minus2=true
+//пїЅпїЅпїЅпїЅ minus1=true пїЅ minus2=true
 if (TEMP.minus1==true && TEMP.minus2==true) {
 	temp=result;
 	result.clear();
@@ -92,7 +90,7 @@ if (TEMP.minus1==true && TEMP.minus2==true) {
 
 temp.clear();
 if (TEMP.minus1==false && TEMP.minus2==true) {
-//если number1>=number2
+//пїЅпїЅпїЅпїЅ number1>=number2
    if (!flag) {
    TEMP.minus1=false;
    TEMP.minus2=false;
@@ -104,7 +102,7 @@ if (TEMP.minus1==false && TEMP.minus2==true) {
    }
    return result;
    } else {
-	 //иначе
+	 //пїЅпїЅпїЅпїЅпїЅ
 	result.clear();
 	TEMP.minus1=false;
 	TEMP.minus2=false;
@@ -121,7 +119,7 @@ if (TEMP.minus1==false && TEMP.minus2==true) {
 }
 
 if (TEMP.minus1==true && TEMP.minus2==false) {
-//если number1>=number2
+//пїЅпїЅпїЅпїЅ number1>=number2
    if (!flag) {
    result.clear();
    TEMP.minus1=false;
@@ -129,7 +127,7 @@ if (TEMP.minus1==true && TEMP.minus2==false) {
    TEMP.number1=TEMP.reverse(TEMP.number1);
    TEMP.number2=TEMP.reverse(TEMP.number2);
    temp=TEMP.number1-TEMP.number2;
-   if (temp[0]=='0' && temp.size()==1) { //если 0
+   if (temp[0]=='0' && temp.size()==1) { //пїЅпїЅпїЅпїЅ 0
 	   return temp;
    }
    result+="-";
@@ -141,7 +139,7 @@ if (TEMP.minus1==true && TEMP.minus2==false) {
    }
    return result;
    } else {
-   //иначе
+   //пїЅпїЅпїЅпїЅпїЅ
 	 TEMP.minus1=false;
 	 TEMP.minus2=false;
 	 TEMP.number1=TEMP.reverse(TEMP.number1);
