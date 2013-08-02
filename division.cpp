@@ -1,5 +1,3 @@
-#include "StdAfx.h"
-#include "verylong.h"
 #include <ios>
 
 string operator/ (const string num1, const string num2) {
@@ -75,10 +73,10 @@ while (!metka) {
 metka=true;
 carry=0;
 if (!flag) {
-divisor=(rhand-lhand)/2;  //если меньше
+divisor=(rhand-lhand)/2;  //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 }
 if (flag) {
-divisor=(rhand-lhand)/2+lhand; //если больше
+divisor=(rhand-lhand)/2+lhand; //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 }
 for (i=0; i<TEMP.count2; i++) {
 	tmp=int(TEMP.number2[i])-48;
@@ -97,7 +95,7 @@ if (carry>0) {
    chas+=char(carry)+48;
 }
 if (deg_chas > deg) {
-   //divisor должен быть меньше
+   //divisor пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
    metka=false;
    flag=false;
 }
@@ -106,7 +104,7 @@ if (metka) {
    for (i=deg_chas-1; i>=0; i-- ) {
 	  if (int(chas[i])-48!=int(del[i])-48) {	
 		if (int(chas[i])-48>int(del[i])-48) {
-		//divisor должен быть меньше
+		//divisor пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 		metka=false;
 		flag=false;
 		i=-1;
@@ -153,13 +151,13 @@ if (metka) {
 			 }
 	  }
 	  if (deg_rem==deg && carry==1) {
-		 //divisor  должен быть меньше
+		 //divisor  пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 		 metka=false;
 		 flag=false;
 	  }
    }
    if (deg_rem > 0) {
-   if (rem[deg_rem-1] == '0' && metka==true) {     //обрезание остатка
+   if (rem[deg_rem-1] == '0' && metka==true) {     //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	 for (i=deg_rem-1; i>=0; i--) {
 		  if (rem[i] == '0') {
 		  deg_rem--;
@@ -170,7 +168,7 @@ if (metka) {
    }
    }
    if (metka==true && deg_rem>TEMP.count2) {
-   //divisor должен быть больше
+   //divisor пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
    metka=false;
    flag=true;
    }
@@ -178,7 +176,7 @@ if (metka) {
 		  for (i=TEMP.count2-1; i>=0; i--) {
 			 if (metka && int(TEMP.number2[i]) != int(rem[i])) {
 			  if (int(TEMP.number2[i]) < int(rem[i])) {
-				//divisor должен быть больше
+				//divisor пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 				metka=false;
 				flag=true;
 				i=-1;
@@ -231,8 +229,8 @@ result+=char(divisor)+48;
 } */
 
 j=offset-(deg-1);
-offset-=((deg-deg_chas)+(deg_chas-deg_rem));   //начальное положение остатка отно-но number1
-if (rem[0] == '0' && deg_rem==0) {    //когда остаток нулевой
+offset-=((deg-deg_chas)+(deg_chas-deg_rem));   //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ-пїЅпїЅ number1
+if (rem[0] == '0' && deg_rem==0) {    //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	   offset++;
 	   	while (j-1>=0 && TEMP.number1[j-1]=='0') { 
 		j--;
@@ -244,7 +242,7 @@ if (rem[0] == '0' && deg_rem==0) {    //когда остаток нулевой
 	   }
 }
 if ((j-(TEMP.count2-deg_rem)>=0 && deg_rem<TEMP.count2) || (i=j-1>=0 && deg_rem==TEMP.count2))  {
-   if (deg_rem==1 && rem[0]=='0') {  //когда остаток нулевой
+   if (deg_rem==1 && rem[0]=='0') {  //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	   deg_rem=0;
    }
  /*  if (deg_rem==TEMP.count2) {
@@ -278,7 +276,7 @@ if (temp.size() == TEMP.count2)
 			offset--;
 		}
 	for (i=TEMP.count2-1; i>=0; i--) {
-		if (int(TEMP.number2[i])-48 < int(temp[i])-48) { //если temp > number2
+		if (int(TEMP.number2[i])-48 < int(temp[i])-48) { //пїЅпїЅпїЅпїЅ temp > number2
 			i=-10;
 			rem.clear();
 			del.clear();
@@ -289,7 +287,7 @@ if (temp.size() == TEMP.count2)
 			deg_chas=0;
 			deg_rem=0;
 		} else {
-			if (int(TEMP.number2[i])-48 > int(temp[i])-48) { //если temp < number2
+			if (int(TEMP.number2[i])-48 > int(temp[i])-48) { //пїЅпїЅпїЅпїЅ temp < number2
 				if (j-(TEMP.count2-deg_rem)-1>=0) {
 					deg=0;
 					temp.clear();
@@ -325,7 +323,7 @@ if (temp.size() == TEMP.count2)
 			}
 		}
 	}
-		if (i==-1) { //если temp == number2
+		if (i==-1) { //пїЅпїЅпїЅпїЅ temp == number2
 			rem.clear();
 			del.clear();
 			del=temp;
@@ -345,12 +343,12 @@ if (temp.size() == TEMP.count2)
   }
 } //while(!exit)
 
-temp.clear();  //для остатка
+temp.clear();  //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if (deg_rem==0 && rem[0]=='0') 
 {
 	deg_rem=1;
 }
-if(rem[0]=='0' && deg_rem==1) //нулевой остаток в конце алгоритма
+if(rem[0]=='0' && deg_rem==1) //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 {   
 	if (j==0) {
 	   for (i=deg_rem-1; i>=0; i--) {
